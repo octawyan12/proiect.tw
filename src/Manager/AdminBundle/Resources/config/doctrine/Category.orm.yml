@@ -1,0 +1,18 @@
+Manager\AdminBundle\Entity\Category:
+    type: entity
+    table: manager_category
+    repositoryClass: Manager\AdminBundle\Entity\CategoryRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+    oneToMany:
+        product:
+          targetEntity: Product
+          mappedBy: category
+    lifecycleCallbacks: {  }

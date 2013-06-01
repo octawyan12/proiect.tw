@@ -1,0 +1,9 @@
+manager_admin_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: ManagerAdminBundle:Default:index }  
+manager_admin_category:
+    resource: "@ManagerAdminBundle/Resources/config/routing/category.yml"
+    prefix:   /category  
+manager_admin_product:
+    resource: "@ManagerAdminBundle/Resources/config/routing/product.yml"
+    prefix:   /product

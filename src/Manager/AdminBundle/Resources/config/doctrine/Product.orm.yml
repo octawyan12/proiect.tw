@@ -1,0 +1,35 @@
+Manager\AdminBundle\Entity\Product:
+    type: entity
+    table: manager_product
+    repositoryClass: Manager\AdminBundle\Entity\ProductRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: 255
+        type:
+            type: string
+            length: 255
+        price:
+            type: string
+            length: 255
+        quantity:
+            type: integer
+        expiration_date:
+            type: date
+            column: expiration_date
+        productionDate:
+            type: date
+            column: production_date
+    manyToOne:
+        category:                   
+          targetEntity: Category
+          inversedBy: product
+          joinColumn:
+            name: category_id
+            referencedColumnName: id        
+    lifecycleCallbacks: {  }

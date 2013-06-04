@@ -15,8 +15,8 @@ class ProductType extends AbstractType
             ->add('type')
             ->add('price')
             ->add('quantity')
-            ->add('expiration_date')
-            ->add('productionDate')
+            ->add('expiration_date','date')
+            ->add('production_date','date')
             ->add('category')
         ;
     }

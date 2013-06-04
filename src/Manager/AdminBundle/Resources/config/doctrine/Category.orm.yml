@@ -1,7 +1,7 @@
 Manager\AdminBundle\Entity\Category:
     type: entity
     table: manager_category
-    repositoryClass: Manager\AdminBundle\Entity\CategoryRepository
+    repositoryClass: Manager\AdminBundle\Repository\CategoryRepository
     fields:
         id:
             type: integer

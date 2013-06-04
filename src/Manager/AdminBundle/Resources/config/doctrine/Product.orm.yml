@@ -1,7 +1,7 @@
 Manager\AdminBundle\Entity\Product:
     type: entity
     table: manager_product
-    repositoryClass: Manager\AdminBundle\Entity\ProductRepository
+    repositoryClass: Manager\AdminBundle\Repository\ProductRepository
     fields:
         id:
             type: integer
@@ -22,7 +22,7 @@ Manager\AdminBundle\Entity\Product:
         expiration_date:
             type: date
             column: expiration_date
-        productionDate:
+        production_date:
             type: date
             column: production_date
     manyToOne:

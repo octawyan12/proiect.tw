@@ -1,5 +1,5 @@
 manager_admin_homepage:
-    pattern:  /hello/{name}
+    pattern:  /
     defaults: { _controller: ManagerAdminBundle:Default:index }  
 manager_admin_category:
     resource: "@ManagerAdminBundle/Resources/config/routing/category.yml"

@@ -5,4 +5,3 @@ user:
 manager_admin:
     resource: "@ManagerAdminBundle/Resources/config/routing.yml"
     prefix:   /admin
-

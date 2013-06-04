@@ -220,4 +220,32 @@ class Product
     {
         return $this->category;
     }
+    /**
+     * @var \Manager\AdminBundle\Entity\Image
+     */
+    private $image;
+
+
+    /**
+     * Set image
+     *
+     * @param \Manager\AdminBundle\Entity\Image $image
+     * @return Product
+     */
+    public function setImage(\Manager\AdminBundle\Entity\Image $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Manager\AdminBundle\Entity\Image 
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
 }

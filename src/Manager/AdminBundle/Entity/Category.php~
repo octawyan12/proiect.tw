@@ -19,8 +19,24 @@ class Category
      */
     private $name;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $product;
 
     /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->product = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    public function __toString() {
+        return $this->getName();
+    }
+
+        /**
      * Get id
      *
      * @return integer 
@@ -39,7 +55,7 @@ class Category
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
@@ -52,19 +68,7 @@ class Category
     {
         return $this->name;
     }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $product;
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->product = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-    
     /**
      * Add product
      *
@@ -74,7 +78,7 @@ class Category
     public function addProduct(\Manager\AdminBundle\Entity\Product $product)
     {
         $this->product[] = $product;
-    
+
         return $this;
     }
 

@@ -25,6 +25,12 @@ Manager\AdminBundle\Entity\Product:
         production_date:
             type: date
             column: production_date
+    oneToOne:
+        image:
+          targetEntity: Image
+          joinColumn:
+              name: image_id
+              referencedColumnName: id
     manyToOne:
         category:                   
           targetEntity: Category

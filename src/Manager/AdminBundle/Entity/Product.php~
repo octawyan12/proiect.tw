@@ -35,14 +35,19 @@ class Product
     private $quantity;
 
     /**
-     * @var string
+     * @var \DateTime
      */
-    private $expirationDate;
+    private $expiration_date;
 
     /**
      * @var \DateTime
      */
-    private $productionDate;
+    private $production_date;
+
+    /**
+     * @var \Manager\AdminBundle\Entity\Category
+     */
+    private $category;
 
 
     /**
@@ -64,7 +69,7 @@ class Product
     public function setName($name)
     {
         $this->name = $name;
-    
+
         return $this;
     }
 
@@ -87,7 +92,7 @@ class Product
     public function setType($type)
     {
         $this->type = $type;
-    
+
         return $this;
     }
 
@@ -110,7 +115,7 @@ class Product
     public function setPrice($price)
     {
         $this->price = $price;
-    
+
         return $this;
     }
 
@@ -133,7 +138,7 @@ class Product
     public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
-    
+
         return $this;
     }
 
@@ -148,61 +153,50 @@ class Product
     }
 
     /**
-     * Set expirationDate
+     * Set expiration_date
      *
-     * @param string $expirationDate
+     * @param \DateTime $expirationDate
      * @return Product
      */
     public function setExpirationDate($expirationDate)
     {
-        $this->expirationDate = $expirationDate;
-    
+        $this->expiration_date = $expirationDate;
+
         return $this;
     }
 
     /**
-     * Get expirationDate
+     * Get expiration_date
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getExpirationDate()
     {
-        return $this->expirationDate;
+        return $this->expiration_date;
     }
 
     /**
-     * Set productionDate
+     * Set production_date
      *
      * @param \DateTime $productionDate
      * @return Product
      */
     public function setProductionDate($productionDate)
     {
-        $this->productionDate = $productionDate;
-    
+        $this->production_date = $productionDate;
+
         return $this;
     }
 
     /**
-     * Get productionDate
+     * Get production_date
      *
      * @return \DateTime 
      */
     public function getProductionDate()
     {
-        return $this->productionDate;
+        return $this->production_date;
     }
-    /**
-     * @var \DateTime
-     */
-    private $expiration_date;
-
-
-    /**
-     * @var \Manager\AdminBundle\Entity\Category
-     */
-    private $category;
-
 
     /**
      * Set category
@@ -213,7 +207,7 @@ class Product
     public function setCategory(\Manager\AdminBundle\Entity\Category $category = null)
     {
         $this->category = $category;
-    
+
         return $this;
     }
 

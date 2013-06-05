@@ -33,7 +33,8 @@ class ProductType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Manager\AdminBundle\Entity\Product'
+            'data_class' => 'Manager\AdminBundle\Entity\Product',
+            'cascade' => 'persist'
         ));
     }
 

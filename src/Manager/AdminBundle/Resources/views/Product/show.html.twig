@@ -22,6 +22,10 @@
                 <td>{{ entity.price }}</td>
             </tr>
             <tr>
+                <th>Image</th>
+                <td><img src="{{ entity.image.webPath | apply_filter('product_thumb') }}" /></td>
+            </tr>
+            <tr>
                 <th>Quantity</th>
                 <td>{{ entity.quantity }}</td>
             </tr>

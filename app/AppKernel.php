@@ -22,8 +22,9 @@ class AppKernel extends Kernel
             new Manager\AdminBundle\ManagerAdminBundle(),
             new Manager\UserBundle\UserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle()
-        );
+            new Avalanche\Bundle\ImagineBundle\AvalancheImagineBundle(),
+
+     );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();

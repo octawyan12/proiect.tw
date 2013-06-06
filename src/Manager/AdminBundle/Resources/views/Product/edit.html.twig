@@ -1,6 +1,6 @@
-{% extends '::base.html.twig' %}
+{% extends 'ManagerAdminBundle::template1.html.twig' %}
 
-{% block body -%}
+{% block content -%}
     <h1>Product edit</h1>
 
     <form action="{{ path('product_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }} novalidate>

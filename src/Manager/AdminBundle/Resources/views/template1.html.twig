@@ -28,11 +28,11 @@
                 </div> <!-- end of header -->
 
                 <ul class="navigation">
-                    <li><a href="{{ path('category') }}">Home<span class="ui_icon home"></span></a></li>
-                    <li><a href="{{ path('product') }}">Product<span class="ui_icon aboutus"></span></a></li>
-                    <li><a href="{{ path('category') }}">Category<span class="ui_icon services"></span></a></li>
-                    <li><a href="{{ path('product') }}">.....<span class="ui_icon gallery"></span></a></li>
-                    <li><a href="{{ path('category') }}">Contact Us<span class="ui_icon contactus"></span></a></li>
+                    <li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Home<span class="ui_icon home"></span></a></li>
+                    <li><a href="{{ path('product') }}" class="{% if app.request.get('_route') == 'product' %}selected{% endif %}">Product<span class="ui_icon aboutus"></span></a></li>
+                    {#<li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Category<span class="ui_icon services"></span></a></li>
+                    <li><a href="{{ path('product') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">.....<span class="ui_icon gallery"></span></a></li>
+                    <li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Contact Us<span class="ui_icon contactus"></span></a></li>#}
                 </ul>
             </div> <!-- end of sidebar -->
 
@@ -48,11 +48,6 @@
                 <div id="content">
                     {% block content %}
                     {% endblock %}
-                   
-
-
-                
-
                 </div> <!-- end of content -->
 
                 <div id="templatemo_footer">

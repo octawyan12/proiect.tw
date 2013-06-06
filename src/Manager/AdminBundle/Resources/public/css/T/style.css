@@ -18,7 +18,7 @@ p { margin: 0 0 10px 0; padding: 0; }
 img { border: none; }
 
 h1, h2, h3, h4, h5, h6 { color: #e2c934; }
-h1 { font-size: 24px; font-weight: normal; margin: 0 0 30px 0; padding: 5px 0; }
+h1 { font-size: 24px; font-weight: normal; margin: 0 0 0px 0; padding: 15px 15px; }
 h2 { font-size: 20px; font-weight: normal; margin: 0 0 30px 0; font-weight: normal; }
 h3 { font-size: 16px; margin: 0 0 15px 0; padding: 0; padding: 0; font-weight: normal;  }
 h4 { font-size: 14px; margin: 0 0 15px 0; padding: 0; }
@@ -72,18 +72,19 @@ h4 { font-size: 14px; margin: 0 0 15px 0; padding: 0; }
 
 
 #content { 
-    overflow:scroll;
-    overflow-x:scroll;
     height: 455px;
     width: 750px;
     background: url(../../images/T/templatemo_content.jpg) no-repeat;
-    max-width:100% ;
-    max-height:100%;
-    margin:auto;
+    margin:50px 0 0 0;
     display:block;
 }
 .content {
-    padding: 10px;
+    height: 384px;
+    width: 90%;
+    margin: 0 20px;
+    overflow: auto;
+    display:block;
+    
 }
 
 ul.navigation {

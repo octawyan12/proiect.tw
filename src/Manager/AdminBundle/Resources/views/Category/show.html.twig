@@ -1,8 +1,8 @@
 {% extends 'ManagerAdminBundle::template1.html.twig' %}
 
 {% block content -%}
-    <h1>Category</h1>
-
+<h1>Category</h1>
+<div class="content">
     <table class="record_properties">
         <tbody>
             <tr>
@@ -16,23 +16,24 @@
         </tbody>
     </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('category') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('category_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('category_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('category') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('category_edit', { 'id': entity.id }) }}">
+                Edit
+            </a>
+        </li>
+        <li>
+            <form action="{{ path('category_delete', { 'id': entity.id }) }}" method="post">
+                <input type="hidden" name="_method" value="DELETE" />
             {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+    </ul>
+</div>
 {% endblock %}

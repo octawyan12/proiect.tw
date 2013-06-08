@@ -3,13 +3,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Shop Manager</title>
-        {% block stylesheets %}
-        <link href="{{ asset('/bundles/manageradmin/css/T/style.css') }}" rel="stylesheet" type="text/css" />
+        {%block stylesheets%}
+
+
+        <link href="{{ asset('/bundles/manageradmin/css/T/style.css')}}" rel="stylesheet" type="text/css" />
          {% endblock %}
-        
-      
+
+
         {% block javascripts %}
-      
+
         {% endblock %}
     </head>
     <body>
@@ -18,16 +20,19 @@
 
             <div id="template_sidebar">
                 <div id="template_header">
-                    <a href="{{ path('category') }}" target="_parent"><img src="images/templatemo_logo.png" alt="Mini Social" /></a>
-                </div> <!-- end of header -->
+                    <a href="{{ path('category') }}" target="_parent"><img src="{{asset('/images/T/alex.png')}}" alt="SHOP MANAGER" /></a>
+                </div> 
+
+                <!-- end of header -->
 
                 <ul class="navigation">
-                    <li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Home<span class="ui_icon home"></span></a></li>
-                    <li><a href="{{ path('product') }}" class="{% if app.request.get('_route') == 'product' %}selected{% endif %}">Product<span class="ui_icon aboutus"></span></a></li>
-                    {#<li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Category<span class="ui_icon services"></span></a></li>
-                    <li><a href="{{ path('product') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">.....<span class="ui_icon gallery"></span></a></li>
-                    <li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Contact Us<span class="ui_icon contactus"></span></a></li>#}
+                    <li><a href="">Home<span class="ui_icon home"></span></a></li>
+                    <li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Categories<span class="ui_icon services"></span></a></li>
+                    <li><a href="{{ path('product') }}" class="{% if app.request.get('_route') == 'product' %}selected{% endif %}">Products<span class="ui_icon aboutus"></span></a></li>
+                    <li><a href="{{ path('category_new') }}" class="{% if app.request.get('_route') == 'category_new' %}selected{% endif %}">New category<span class="ui_icon contactus"></span></a></li>
+                    <li><a href="{{ path('product_new') }}" class="{% if app.request.get('_route') == 'product_new' %}selected{% endif %}">New product<span class="ui_icon gallery"></span></a></li>
                 </ul>
+
             </div> <!-- end of sidebar -->
 
             <div id="template_main">
@@ -40,18 +45,19 @@
                 </ul>
 
                 <div id="content">
+
                     {% block content %}
                     {% endblock %}
                 </div> <!-- end of content -->
 
                 <div id="template_footer">
 
-                    Copyright © 2048 <a href="#">Your Company Name</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
+                    Copyright © 2013 <a href="www.facebooc.com">plm</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">yummy d-krich</a> by <a href="http://www.templatemo.com" target="_parent">Axon Turmentatu</a>
 
                 </div> <!-- end of templatemo_footer -->
 
             </div> <!-- end of main -->
         </div>
 
-      </body>
+    </body>
 </html>

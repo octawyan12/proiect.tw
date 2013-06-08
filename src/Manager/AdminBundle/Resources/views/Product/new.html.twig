@@ -1,20 +1,21 @@
 {% extends 'ManagerAdminBundle::template1.html.twig' %}
 
 {% block content -%}
-    <h1>Product creation</h1>
-
+<h1>Product creation</h1>
+<div class="content">
     <form action="{{ path('product_create') }}" method="post" {{ form_enctype(form) }} novalidate>
         {{ form_widget(form) }}
-        <p>
-            <button type="submit">Create</button>
-        </p>
-    </form>
+            <p>
+                <button type="submit">Create</button>
+            </p>
+        </form>
 
         <ul class="record_actions">
-    <li>
-        <a href="{{ path('product') }}">
-            Back to the list
-        </a>
-    </li>
-</ul>
+            <li>
+                <a href="{{ path('product') }}">
+                    Back to the list
+                </a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}

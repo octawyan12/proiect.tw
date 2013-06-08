@@ -1,7 +1,7 @@
 {% extends 'ManagerAdminBundle::template1.html.twig' %}
 {% block content -%}
-    <h1>Category list</h1>
-
+<h1>Category list</h1>
+<div class="content">
     <table class="records_list">
         <thead>
             <tr>
@@ -12,29 +12,30 @@
         </thead>
         <tbody>
         {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('category_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.name }}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('category_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('category_edit', { 'id': entity.id }) }}">edit</a>
-                    </li>
-                </ul>
-                </td>
-            </tr>
+                <tr>
+                    <td><a href="{{ path('category_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.name }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('category_show', { 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('category_edit', { 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
         {% endfor %}
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
         <ul>
-        <li>
-            <a href="{{ path('category_new') }}">
-                Create a new entry
-            </a>
-        </li>
-    </ul>
+            <li>
+                <a href="{{ path('category_new') }}">
+                    Create a new entry
+                </a>
+            </li>
+        </ul>
+    </div>
     {% endblock %}

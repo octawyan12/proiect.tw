@@ -28,3 +28,4 @@ product_delete:
     pattern:  /{id}/delete
     defaults: { _controller: "ManagerAdminBundle:Product:delete" }
     requirements: { _method: post|delete }
+

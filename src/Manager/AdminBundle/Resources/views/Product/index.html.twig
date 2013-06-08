@@ -1,54 +1,24 @@
 {% extends 'ManagerAdminBundle::template1.html.twig' %}
 {% block content -%}
-    <h1>Product list</h1>
-    <div class="content">
-        
-
-        <table class="records_list">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Expiration_date</th>
-                    <th>Productiondate</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for entity in entities %}
-                    <tr>
-                        <td><a href="{{ path('product_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                        <td>{{ entity.name }}</td>
-                        <td>{{ entity.type }}</td>
-                        <td>{{ entity.price }}</td>
-                        <td>{{ entity.quantity }}</td>
-                        <td>{% if entity.expirationdate %}{{ entity.expirationdate|date('Y-m-d H:i:s') }}{% endif %}</td>
-                        <td>{% if entity.productionDate %}{{ entity.productionDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="{{ path('product_show', { 'id': entity.id }) }}">show</a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('product_edit', { 'id': entity.id }) }}">edit</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                <br/>
-            {% endfor %}
-                </tbody>
-            </table>
-
-            <ul>
-                <li>
-                    <a href="{{ path('product_new') }}">
-                        Create a new entry
-                    </a>
-                </li>
-            </ul>
+<h1>Products list</h1>
+<div class="content">
+{% for entity in entities %}
+    <div class="gallery_box">
+        <a href="{{ path('product_show', { 'id': entity.id }) }}"><img src="{{ entity.image.webPath | apply_filter('product_thumb') }}" /></a>
+        <h4><a href="{{ path('product_show', { 'id': entity.id }) }}">{{ entity.name }}</a></h4>
+        <h5>{{ entity.quantity }}</h5>
+        <h5>{{ entity.type }}</h5>
+        <h5>{{ entity.quantity }}</h5>
+        <div class="btn_se"><a href="{{ path('product_edit', { 'id': entity.id }) }}">Edit <span>&raquo;</span></a></div>
+        <div class="cleaner"></div>          
     </div>
-    {% endblock %}
+{%endfor%}
+<ul>
+            <li>
+                <a href="{{ path('product_new') }}">
+                    Create a new entry
+                </a>
+            </li>
+</ul>
+
+{% endblock %}

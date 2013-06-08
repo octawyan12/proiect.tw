@@ -2,7 +2,7 @@
 
 {% block content -%}
     <h1>Category creation</h1>
-
+<div class="content">
     <form action="{{ path('category_create') }}" method="post" {{ form_enctype(form) }} novalidate>
         {{ form_widget(form) }}
         <p>
@@ -17,4 +17,5 @@
         </a>
     </li>
 </ul>
+        </div>
 {% endblock %}

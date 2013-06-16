@@ -4,14 +4,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Shop Manager</title>
         {%block stylesheets%}
-
-
-        <link href="{{ asset('/bundles/manageradmin/css/T/style.css')}}" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('bundles/manageradmin/css/T/style.css')}}" rel="stylesheet" type="text/css" />
+            <link href="{{ asset('bundles/manageradmin/css/ui-darkness/jquery-ui-1.10.3.custom.css')}}" rel="stylesheet" type="text/css" />
          {% endblock %}
 
-
         {% block javascripts %}
-
+            <script src="{{ asset('bundles/manageradmin/js/jquery-ui-1.10.3.custom.js') }}"></script>
+            <script src="{{ asset('bundles/manageradmin/js/jquery-1.9.1.js') }}"></script>
         {% endblock %}
     </head>
     <body>
@@ -26,7 +25,7 @@
                 <!-- end of header -->
 
                 <ul class="navigation">
-                    <li><a href="">Home<span class="ui_icon home"></span></a></li>
+                    <li><a href="{{ path('manager_admin_homepage') }}" class="{% if app.request.get('_route') == 'manager_admin_homepage' %}selected{% endif %}">Home<span class="ui_icon home"></span></a></li>
                     <li><a href="{{ path('category') }}" class="{% if app.request.get('_route') == 'category' %}selected{% endif %}">Categories<span class="ui_icon services"></span></a></li>
                     <li><a href="{{ path('product') }}" class="{% if app.request.get('_route') == 'product' %}selected{% endif %}">Products<span class="ui_icon aboutus"></span></a></li>
                     <li><a href="{{ path('category_new') }}" class="{% if app.request.get('_route') == 'category_new' %}selected{% endif %}">New category<span class="ui_icon contactus"></span></a></li>
@@ -52,7 +51,7 @@
 
                 <div id="template_footer">
 
-                    Copyright © 2013 <a href="www.facebooc.com">plm</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">yummy d-krich</a> by <a href="http://www.templatemo.com" target="_parent">Axon Turmentatu</a>
+                    Copyright © {{ 'now'|date('Y') }} <a href="www.facebooc.com">plm</a> | <a href="http://www.iwebsitetemplate.com" target="_parent">yummy d-krich</a> by <a href="http://www.templatemo.com" target="_parent">Axon Turmentatu</a>
 
                 </div> <!-- end of templatemo_footer -->
 

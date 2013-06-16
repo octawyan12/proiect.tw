@@ -1,6 +1,6 @@
 Manager\AdminBundle\Entity\Image:
   type: entity
-  table: dbla_cms_image
+  table: manager_image
   fields:
     id:
       type: integer

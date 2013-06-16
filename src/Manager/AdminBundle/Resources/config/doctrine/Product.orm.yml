@@ -11,9 +11,6 @@ Manager\AdminBundle\Entity\Product:
         name:
             type: string
             length: 255
-        type:
-            type: string
-            length: 255
         price:
             type: string
             length: 255

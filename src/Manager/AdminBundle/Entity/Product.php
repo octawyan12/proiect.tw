@@ -22,11 +22,6 @@ class Product
     /**
      * @var string
      */
-    private $type;
-
-    /**
-     * @var string
-     */
     private $price;
 
     /**
@@ -81,29 +76,6 @@ class Product
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set type
-     *
-     * @param string $type
-     * @return Product
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return string 
-     */
-    public function getType()
-    {
-        return $this->type;
     }
 
     /**

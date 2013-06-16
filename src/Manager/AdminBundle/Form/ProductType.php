@@ -25,7 +25,11 @@ class ProductType extends AbstractType
 	            'format' => 'dd-MM-yyyy',
 	            'attr' => array('class' => 'datepicker')
 	        ))
-            ->add('expiration_date','date')
+            ->add('expiration_date','date', array(
+                    'widget' => 'single_text',
+	            'format' => 'dd-MM-yyyy',
+	            'attr' => array('class' => 'datepicker')
+	        ))
             ->add('category')
             ->add('image', new \Manager\AdminBundle\Form\ImageType(), array(
               'can_be_removed' => $can_be_removed
